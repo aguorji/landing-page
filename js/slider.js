@@ -1,10 +1,13 @@
 
-/* ---------- Hambourgar Menu ---------- */
+/* ---------- Hambourgar Menu    ---------- */
 
 
 const toggle = document.querySelector('.nav-toggle');
 const navLinks = document.querySelector('.nav-links');
 
-toggle.addEventListener('click', () => {
-  navLinks.classList.toggle('active');
-});
+if (toggle && navLinks) {
+  toggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+}
+

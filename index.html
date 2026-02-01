@@ -19,11 +19,12 @@
         </a>
       </div>
 
-          <button class="nav-toggle" aria-label="Toggle navigation">
-           ☰
-          </button>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        ☰
+      </button>
 
-      <nav>
+      <nav class="primary-nav">
+
         <ul class="nav-links">
           <li><a href="#about">About</a></li>
           <li><a href="#skills">Skills</a></li>
@@ -35,104 +36,112 @@
     </div>
   </header>
 
-  <!-- HERO / SLIDER -->
-  <section class="hero" id="hero">
-    <div class="slider">
-      <!-- Slide 1 -->
-      <article class="slide active">
-        <div class="slide-content">
-          <h1>Frontend Web Developer</h1>
-          <p>Building responsive, fast, and modern websites with clean code.</p>
-          <div class="cta-group">
-            <a href="#projects" class="btn primary">View My Work</a>
-            <a href="#contact" class="btn secondary">Contact Me</a>
+  <main>
+    <!-- hero, sections, etc -->
+
+
+    <!-- HERO / SLIDER -->
+    <section class="hero" id="hero">
+      <div class="slider">
+        <!-- Slide 1 -->
+        <article class="slide active">
+          <div class="slide-content">
+            <h1>Frontend Web Developer</h1>
+            <p>Building responsive, fast, and modern websites with clean code.</p>
+            <div class="cta-group">
+              <a href="#projects" class="btn primary">View My Work</a>
+              <a href="#contact" class="btn secondary">Contact Me</a>
+            </div>
           </div>
-        </div>
-        <div class="slide-image">
-          <img src="assets/images/hero-illustration.svg" alt="Web Developer Illustration">
-        </div>
-      </article>
-
-      <!-- Slide 2 -->
-      <article class="slide">
-        <div class="slide-content">
-          <h1>Turn Ideas Into Reality</h1>
-          <p>I help individuals and businesses create high-quality web experiences.</p>
-          <div class="cta-group">
-            <a href="#services" class="btn primary">My Services</a>
+          <div class="slide-image">
+            <img src="assets/images/hero-illustration.svg" alt="Web Developer Illustration">
           </div>
-        </div>
-        <div class="slide-image">
-          <img src="assets/images/hero-illustration.svg" alt="Web Developer Illustration">
-        </div>
-      </article>
+        </article>
 
-      <!-- Slide 3 -->
-      <article class="slide">
-        <div class="slide-content">
-          <h1>Real Projects. Real Results.</h1>
-          <p>Explore my GitHub projects and live demos.</p>
-          <div class="cta-group">
-            <a href="#projects" class="btn primary">View Projects</a>
+        <!-- Slide 2 -->
+        <article class="slide">
+          <div class="slide-content">
+            <h1>Turn Ideas Into Reality</h1>
+            <p>I help individuals and businesses create high-quality web experiences.</p>
+            <div class="cta-group">
+              <a href="#services" class="btn primary">My Services</a>
+            </div>
           </div>
-        </div>
-        <div class="slide-image">
-          <img src="assets/images/hero-illustration.svg" alt="Web Developer Illustration">
-        </div>
-      </article>
+          <div class="slide-image">
+            <img src="assets/images/hero-illustration.svg" alt="Web Developer Illustration">
+          </div>
+        </article>
 
-      <!-- Slider Controls -->
-      <button class="slider-btn prev" aria-label="Previous slide">&#10094;</button>
-      <button class="slider-btn next" aria-label="Next slide">&#10095;</button>
+        <!-- Slide 3 -->
+        <article class="slide">
+          <div class="slide-content">
+            <h1>Real Projects. Real Results.</h1>
+            <p>Explore my GitHub projects and live demos.</p>
+            <div class="cta-group">
+              <a href="#projects" class="btn primary">View Projects</a>
+            </div>
+          </div>
+          <div class="slide-image">
+            <img src="assets/images/hero-illustration.svg" alt="Web Developer Illustration">
+          </div>
+        </article>
 
-      <!-- Slider Indicators -->
-      <div class="indicators">
-        <button class="dot active"></button>
-        <button class="dot"></button>
-        <button class="dot"></button>
+        <!-- Slider Controls -->
+        <button class="slider-btn prev" aria-label="Previous slide">&#10094;</button>
+        <button class="slider-btn next" aria-label="Next slide">&#10095;</button>
+
+        <!-- Slider Indicators -->
+        <div class="indicators">
+          <button class="dot active"></button>
+          <button class="dot"></button>
+          <button class="dot"></button>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ABOUT -->
-  <section id="about" class="about">
-    <div class="container">
-      <h2>About Me</h2>
-      <p>Introduce yourself professionally. Include background, experience, and your development philosophy.</p>
-    </div>
-  </section>
+    <!-- ABOUT -->
+    <section id="about" class="about">
+      <div class="container">
+        <h2>About Me</h2>
+        <p>Introduce yourself professionally. Include background, experience, and your development philosophy.</p>
+      </div>
+    </section>
 
-  <!-- SKILLS -->
-  <section id="skills" class="skills">
-    <div class="container">
-      <h2>Skills</h2>
-      <p>List your core web development skills: HTML, CSS, JavaScript, frameworks, tools, etc.</p>
-    </div>
-  </section>
+    <!-- SKILLS -->
+    <section id="skills" class="skills">
+      <div class="container">
+        <h2>Skills</h2>
+        <p>List your core web development skills: HTML, CSS, JavaScript, frameworks, tools, etc.</p>
+      </div>
+    </section>
 
-  <!-- PROJECTS -->
-  <section id="projects" class="projects">
-    <div class="container">
-      <h2>Projects</h2>
-      <p>Showcase real projects with links to live demos or GitHub repositories.</p>
-    </div>
-  </section>
+    <!-- PROJECTS -->
+    <section id="projects" class="projects">
+      <div class="container">
+        <h2>Projects</h2>
+        <p>Showcase real projects with links to live demos or GitHub repositories.</p>
+      </div>
+    </section>
 
-  <!-- SERVICES -->
-  <section id="services" class="services">
-    <div class="container">
-      <h2>Services</h2>
-      <p>Outline services you provide: Web development, UI/UX design, consultancy, etc.</p>
-    </div>
-  </section>
+    <!-- SERVICES -->
+    <section id="services" class="services">
+      <div class="container">
+        <h2>Services</h2>
+        <p>Outline services you provide: Web development, UI/UX design, consultancy, etc.</p>
+      </div>
+    </section>
 
-  <!-- CONTACT -->
-  <section id="contact" class="contact">
-    <div class="container">
-      <h2>Contact Me</h2>
-      <p>Add a contact form or your professional email/social links.</p>
-    </div>
-  </section>
+    <!-- CONTACT -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <h2>Contact Me</h2>
+        <p>Add a contact form or your professional email/social links.</p>
+      </div>
+    </section>
+
+
+  </main>
+
 
   <!-- FOOTER -->
   <footer class="footer">

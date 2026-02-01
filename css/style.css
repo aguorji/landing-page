@@ -59,7 +59,7 @@ body {
 .header {
   background-color: #fff;
   padding: 20px 0;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   position: sticky;
   top: 0;
   z-index: 100;
@@ -194,15 +194,20 @@ body {
   top: 50%;
   transform: translateY(-50%);
   font-size: 2rem;
-  background: rgba(255,255,255,0.7);
+  background: rgba(255, 255, 255, 0.7);
   border: none;
   cursor: pointer;
   padding: 8px 12px;
   border-radius: 50%;
 }
 
-.slider-btn.prev { left: 10px; }
-.slider-btn.next { right: 10px; }
+.slider-btn.prev {
+  left: 10px;
+}
+
+.slider-btn.next {
+  right: 10px;
+}
 
 /* Slider indicators */
 .indicators {
@@ -260,7 +265,7 @@ section p {
 
 .btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
 }
 
 .btn:active {
@@ -270,13 +275,29 @@ section p {
 
 /* ---------- Responsiveness ---------- */
 
+
 @media (max-width: 768px) {
+  /* tablet & mobile */
 
   .nav {
     flex-direction: column;
     align-items: center;
-    gap: 1rem;
+    gap: 2rem;
   }
+}
+
+
+@media (max-width: 480px) {
+  /* small phones only */
+
+  .header {
+    padding: 12px 0;
+  }
+
+  .logo img {
+    margin: 0 auto;
+  }
+
 
   .nav-toggle {
     display: block;
@@ -290,7 +311,13 @@ section p {
     text-align: center;
   }
 
+  .nav-links a {
+    padding: 12px;
+  }
+
+
   .nav-links.active {
     display: flex;
   }
+
 }
