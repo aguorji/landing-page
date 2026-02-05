@@ -23,6 +23,12 @@
   /* UI */
   --radius: 8px;
   --transition: 0.3s ease;
+
+  /* Motion */
+
+  --motion-fast: 150ms ease;
+  --motion-base: 300ms ease;
+  --motion-slow: 600ms ease;
 }
 
 
@@ -155,9 +161,12 @@ p {
   list-style: none;
   margin: 0;
   padding: 0;
+
+
 }
 
 .nav-links a {
+  position: relative;
   text-decoration: none;
   color: var(--color-text);
   font-size: var(--fs-nav);
@@ -166,11 +175,27 @@ p {
   transition: background var(--transition), color var(--transition);
 }
 
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 4px;
+  width: 0;
+  height: 2px;
+  background: var(--color-primary);
+  transition: width var(--motion-fast), left var(--motion-fast);
+}
+
 
 .nav-links a:hover {
   background-color: var(--color-primary);
   color: var(--color-white);
   border-radius: 4px;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+  left: 0;
 }
 
 .hire-btn {
@@ -271,6 +296,23 @@ p {
   max-width: 100%;
   height: auto;
 }
+
+.hero .slide-content,
+.hero .slide-image {
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity var(--motion-slow),
+    transform var(--motion-slow);
+}
+
+
+.slide.active .slide-content,
+.slide.active .slide-image {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 
 /* Slider controls */
 .slider-btn {
@@ -433,15 +475,22 @@ section>.container {
   }
 
   .nav-links {
-    display: none;
     flex-direction: column;
     gap: var(--space-sm);
     width: 100%;
     text-align: center;
+
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition:
+      max-height var(--motion-base),
+      opacity var(--motion-base);
   }
 
   .nav-links.active {
-    display: flex;
+    max-height: 300px;
+    opacity: 1;
   }
 
   .hero {
@@ -520,4 +569,14 @@ section>.container {
     text-align: center;
   }
 
+}
+
+
+
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
 }
