@@ -1,5 +1,5 @@
-// TODO: set this to the email address you want enquiries sent to
-const CONTACT_EMAIL = 'hello@example.com';
+// Email address that contact-form enquiries are sent to
+const CONTACT_EMAIL = 'info@agutechlabs.com';
 
 document.documentElement.classList.add('js');
 

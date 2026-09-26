@@ -13,7 +13,7 @@ Search the project for `TODO` — every spot that needs your real details is mar
 1. **Projects** (`index.html`, `#projects`): replace the sample cards with your real projects.
    Add screenshots to `assets/images/projects/` and swap the gradient `thumb` for an `<img>`.
    Set `data-category` to `website`, `app` or `ui` so the filters work.
-2. **Email:** update `CONTACT_EMAIL` in `js/main.js` (the page picks it up automatically).
+2. **Email:** set to `info@agutechlabs.com` via `CONTACT_EMAIL` in `js/main.js`.
 3. **LinkedIn:** update the LinkedIn URL in the hero.
 4. **Photo:** add `assets/images/profile.jpg` and replace the `KA` placeholder in the About section.
 5. **CV:** add your CV as `assets/cv.pdf`.
@@ -29,4 +29,13 @@ npx serve .
 
 ## Deploy
 
-Works on any static host — GitHub Pages (Settings → Pages → deploy from `main`), Netlify or Vercel.
+Live domain: **https://agutechlabs.com**
+
+Works on any static host. For GitHub Pages, the `CNAME` file already points the site at
+`agutechlabs.com`:
+
+1. Repo **Settings → Pages** → deploy from the `main` branch, root folder.
+2. At your domain registrar, add DNS records:
+   - `A` records for `@` → `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
+   - `CNAME` record for `www` → `aguorji.github.io`
+3. Once DNS is live, tick **Enforce HTTPS** in the Pages settings.
