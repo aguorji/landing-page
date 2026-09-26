@@ -20,6 +20,22 @@ Search the project for `TODO` — every spot that needs your real details is mar
 4. **Photo:** add `assets/images/profile.jpg` and replace the `KA` placeholder in the About section.
 5. **CV:** add your CV as `assets/cv.pdf`.
 6. **Stats & skills:** keep only numbers and skills that are true for you.
+7. **Contact form:** create a free form at [formspree.io](https://formspree.io) using
+   `info@agutechlabs.com`, then paste its ID into `FORMSPREE_ID` in `js/main.js`.
+   Until then, the form opens the visitor's email app.
+8. **Prices:** replace the "Quote on request" lines in the Packages section with your prices.
+9. **Testimonials:** the section is hidden. Add real client quotes, then remove `hidden` from
+   `<section id="testimonials">`.
+10. **FAQ & privacy policy:** review the answers in the FAQ section and `privacy.html`
+    (a general template, not legal advice).
+
+## Pages & files
+
+- `index.html` — main page
+- `privacy.html` — privacy policy
+- `404.html` — "page not found" page (used automatically by GitHub Pages, Netlify and Vercel)
+- `assets/images/og-image.png` — preview image shown when the link is shared
+- `robots.txt`, `sitemap.xml`, `CNAME` — search engines and custom domain
 
 ## Run locally
 

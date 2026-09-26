@@ -16,6 +16,11 @@
   <meta property="og:url" content="https://agutechlabs.com/">
   <meta property="og:site_name" content="AguTech Labs">
   <meta property="og:title" content="AguTech Labs | Web Design &amp; Development">
+  <meta property="og:image" content="https://agutechlabs.com/assets/images/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="AguTech Labs, web design and development">
+  <meta name="twitter:card" content="summary_large_image">
   <meta property="og:description"
     content="Fast, responsive and accessible websites and web apps. View my projects and get in touch.">
 
@@ -34,6 +39,7 @@
   </script>
 
   <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -65,8 +71,9 @@
         <ul class="nav-links">
           <li><a href="#projects">Projects</a></li>
           <li><a href="#services">Services</a></li>
-          <li><a href="#skills">Skills</a></li>
+          <li><a href="#pricing">Pricing</a></li>
           <li><a href="#about">About</a></li>
+          <li><a href="#faq">FAQ</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
@@ -412,8 +419,66 @@
       </div>
     </section>
 
+    <!-- PRICING / PACKAGES -->
+    <section id="pricing" class="section">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">Packages</p>
+          <h2>Simple, transparent packages</h2>
+          <p>Pick the package that fits your goals. Every project is quoted up front, with no hidden costs.</p>
+        </header>
+
+        <!--
+          TODO: add your prices. Replace each "price-quote" line with e.g.
+          <p class="price"><span>From</span> $499</p>
+        -->
+        <div class="pricing-grid">
+          <article class="price-card reveal">
+            <h3>Landing page</h3>
+            <p class="price-desc">A single, high-converting page to launch a product, service or campaign.</p>
+            <p class="price price-quote">Quote on request</p>
+            <ul class="checklist">
+              <li>Custom one-page design</li>
+              <li>Mobile-first &amp; responsive</li>
+              <li>Contact or sign-up form</li>
+              <li>Basic SEO setup</li>
+            </ul>
+            <a href="#contact" class="btn btn-ghost btn-block" data-package="Landing page">Get started</a>
+          </article>
+
+          <article class="price-card featured reveal">
+            <p class="price-badge">Most popular</p>
+            <h3>Business website</h3>
+            <p class="price-desc">A complete multi-page website that presents your business and wins customers.</p>
+            <p class="price price-quote">Quote on request</p>
+            <ul class="checklist">
+              <li>Up to 6 custom pages</li>
+              <li>Mobile-first &amp; responsive</li>
+              <li>SEO &amp; speed optimisation</li>
+              <li>Analytics &amp; contact form</li>
+              <li>Support after launch</li>
+            </ul>
+            <a href="#contact" class="btn btn-primary btn-block" data-package="Business website">Get started</a>
+          </article>
+
+          <article class="price-card reveal">
+            <h3>Web application</h3>
+            <p class="price-desc">A custom, interactive app such as a dashboard, booking system or SaaS frontend.</p>
+            <p class="price price-quote">Custom quote</p>
+            <ul class="checklist">
+              <li>Discovery &amp; planning</li>
+              <li>Custom features &amp; API integrations</li>
+              <li>Testing on real devices</li>
+              <li>Ongoing maintenance options</li>
+            </ul>
+            <a href="#contact" class="btn btn-ghost btn-block" data-package="Web application">Get started</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <!-- SKILLS -->
-    <section id="skills" class="section">
+    <section id="skills" class="section section-alt">
       <div class="container">
         <header class="section-head reveal">
           <p class="eyebrow">Tech stack</p>
@@ -449,7 +514,7 @@
     </section>
 
     <!-- ABOUT -->
-    <section id="about" class="section section-alt">
+    <section id="about" class="section">
       <div class="container about-grid">
         <div class="about-photo reveal">
           <!-- TODO: replace with your photo: <img src="assets/images/profile.jpg" alt="Kevin O. Agu"> -->
@@ -483,6 +548,88 @@
       </div>
     </section>
 
+    <!-- TESTIMONIALS
+         Hidden until you have real client quotes. To show it:
+         1. Replace the quote, name and role in each card with a real testimonial.
+         2. Remove the word "hidden" from the <section> tag below.
+         3. Optionally add <li><a href="#testimonials">Reviews</a></li> to the nav. -->
+    <section id="testimonials" class="section section-alt" hidden>
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">Testimonials</p>
+          <h2>What clients say</h2>
+        </header>
+        <div class="testimonial-grid">
+          <figure class="testimonial reveal">
+            <blockquote>“Client quote goes here — what problem you solved and the result they got.”</blockquote>
+            <figcaption>
+              <span class="avatar" aria-hidden="true">CN</span>
+              <span><strong>Client Name</strong><br>Role, Company</span>
+            </figcaption>
+          </figure>
+          <figure class="testimonial reveal">
+            <blockquote>“Client quote goes here — what problem you solved and the result they got.”</blockquote>
+            <figcaption>
+              <span class="avatar" aria-hidden="true">CN</span>
+              <span><strong>Client Name</strong><br>Role, Company</span>
+            </figcaption>
+          </figure>
+          <figure class="testimonial reveal">
+            <blockquote>“Client quote goes here — what problem you solved and the result they got.”</blockquote>
+            <figcaption>
+              <span class="avatar" aria-hidden="true">CN</span>
+              <span><strong>Client Name</strong><br>Role, Company</span>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <!-- TODO: review these answers so they match how you work -->
+    <section id="faq" class="section section-alt">
+      <div class="container faq-wrap">
+        <header class="section-head reveal">
+          <p class="eyebrow">FAQ</p>
+          <h2>Frequently asked questions</h2>
+          <p>Can't find your answer? <a href="#contact" class="text-link">Send me a message</a>.</p>
+        </header>
+
+        <div class="faq-list reveal">
+          <details>
+            <summary>How long does a project take?</summary>
+            <p>It depends on the scope. A landing page usually takes 1–2 weeks and a business website 3–6
+              weeks. You'll get a clear timeline before we start.</p>
+          </details>
+          <details>
+            <summary>How much does a website cost?</summary>
+            <p>Every project is quoted based on the pages, features and content you need. After a short call
+              I'll send you a fixed, itemised quote, so there are no surprises.</p>
+          </details>
+          <details>
+            <summary>What do you need from me to get started?</summary>
+            <p>Your goals, any branding you have (logo, colours, fonts), the text and images for your site,
+              and examples of websites you like. If you don't have content yet, I can help you plan it.</p>
+          </details>
+          <details>
+            <summary>Will my website work on phones and tablets?</summary>
+            <p>Yes. Every site is built mobile-first and tested on real phones, tablets and desktops across
+              modern browsers.</p>
+          </details>
+          <details>
+            <summary>Can I update the website myself?</summary>
+            <p>Yes. I can build on a platform or CMS that lets you edit text and images yourself, and I'll show
+              you how to do it before handover.</p>
+          </details>
+          <details>
+            <summary>Do you offer support after launch?</summary>
+            <p>Yes. Every project includes a support period after launch for fixes and small changes, and
+              ongoing maintenance is available if you need it.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
     <!-- CONTACT -->
     <section id="contact" class="section">
       <div class="container">
@@ -511,6 +658,8 @@
           </div>
 
           <form class="contact-form" novalidate>
+            <!-- Spam trap: hidden from people, bots fill it in -->
+            <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
             <div class="field">
               <label for="name">Name</label>
               <input id="name" name="name" type="text" autocomplete="name" required placeholder="Your name">
@@ -525,6 +674,8 @@
                 placeholder="Tell me about your project, timeline and budget"></textarea>
             </div>
             <button type="submit" class="btn btn-primary btn-block">Send message</button>
+            <p class="form-note">Your details are only used to reply to you. See the <a href="privacy.html"
+                class="text-link">privacy policy</a>.</p>
             <p class="form-status" role="status" aria-live="polite"></p>
           </form>
         </div>
@@ -541,7 +692,10 @@
         <span class="logo-text">AguTech <span>Labs</span></span>
       </a>
       <p>&copy; <span id="year">2026</span> AguTech Labs. All rights reserved.</p>
-      <a href="#top" class="to-top">Back to top ↑</a>
+      <div class="footer-links">
+        <a href="privacy.html">Privacy</a>
+        <a href="#top">Back to top ↑</a>
+      </div>
     </div>
   </footer>
 
