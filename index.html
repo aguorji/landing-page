@@ -4,158 +4,529 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kevin O. Agu | Web Developer</title>
+  <title>Kevin O. Agu | Frontend Web Developer</title>
+  <meta name="description"
+    content="Kevin O. Agu is a frontend web developer building fast, responsive and accessible websites and web apps for businesses and teams.">
+  <meta name="theme-color" content="#0b1020">
+
+  <!-- Social sharing preview -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Kevin O. Agu | Frontend Web Developer">
+  <meta property="og:description"
+    content="Fast, responsive and accessible websites and web apps. View my projects and get in touch.">
+
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+
+  <!-- Apply saved theme before paint to avoid a flash -->
+  <script>
+    try {
+      const t = localStorage.getItem('theme');
+      if (t) document.documentElement.dataset.theme = t;
+    } catch (e) { }
+  </script>
 </head>
 
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
   <!-- HEADER -->
   <header class="header">
     <div class="container nav">
-      <div class="logo">
-        <a href="index.html">
-          <img src="assets/images/logo.png" alt="OJTech Logo" width="150">
-        </a>
-      </div>
+      <a href="#top" class="logo" aria-label="Kevin O. Agu, home">
+        <span class="logo-mark">KA</span>
+        <span class="logo-text">Kevin Agu</span>
+      </a>
 
-      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
-        ☰
-      </button>
-
-      <nav class="primary-nav">
-
+      <nav class="primary-nav" id="primary-nav" aria-label="Primary">
         <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#skills">Skills</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#services">Services</a></li>
-          <li><a href="#contact" class="btn btn-primary">Hire Me</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
+
+      <div class="nav-actions">
+        <button class="icon-btn theme-toggle" type="button" aria-label="Switch color theme">
+          <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="4" />
+            <path
+              d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" />
+          </svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+          </svg>
+        </button>
+        <a href="#contact" class="btn btn-primary btn-sm nav-cta">Hire me</a>
+        <button class="icon-btn nav-toggle" type="button" aria-label="Open menu" aria-expanded="false"
+          aria-controls="primary-nav">
+          <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+        </button>
+      </div>
     </div>
   </header>
 
-  <main>
-    <!-- hero, sections, etc -->
+  <main id="main">
 
-
-    <!-- HERO / SLIDER -->
-    <section class="hero" id="hero">
-      <div class="container">
-        <div class="slider hero-content">
-          <!-- Slide 1 -->
-          <article class="slide active">
-            <div class="slide-content">
-              <h2>Frontend Web Developer</h2>
-              <p>Building responsive, fast, and modern websites with clean code.</p>
-              <div class="cta-group">
-                <a href="#projects" class="btn btn-primary">View My Work</a>
-                <a href="#contact" class="btn btn-secondary">Contact Me</a>
-              </div>
-            </div>
-            <div class="slide-image">
-              <img src="assets/images/hero-illustration.svg"
-                alt="Illustration of a frontend web developer working on a laptop">
-            </div>
-          </article>
-
-          <!-- Slide 2 -->
-          <article class="slide">
-            <div class="slide-content">
-              <h1>Turn Ideas Into Reality</h1>
-              <p>I help individuals and businesses create high-quality web experiences.</p>
-              <div class="cta-group">
-                <a href="#services" class="btn btn-primary">My Services</a>
-              </div>
-            </div>
-            <div class="slide-image">
-              <img src="assets/images/hero-illustration.svg" alt="Web Developer Illustration">
-            </div>
-          </article>
-
-          <!-- Slide 3 -->
-          <article class="slide">
-            <div class="slide-content">
-              <h1>Real Projects. Real Results.</h1>
-              <p>Explore my GitHub projects and live demos.</p>
-              <div class="cta-group">
-                <a href="#projects" class="btn btn-primary">View Projects</a>
-              </div>
-            </div>
-            <div class="slide-image">
-              <img src="assets/images/hero-illustration.svg" alt="Web Developer Illustration">
-            </div>
-          </article>
-
-          <!-- Slider Controls -->
-          <button class="slider-btn prev" aria-label="Previous slide">&#10094;</button>
-          <button class="slider-btn next" aria-label="Next slide">&#10095;</button>
-
-          <!-- Slider Indicators -->
-          <div class="indicators">
-            <button class="dot active" aria-label="Go to slide 1"></button>
-            <button class="dot"></button>
-            <button class="dot"></button>
+    <!-- HERO -->
+    <section class="hero" id="top">
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="badge"><span class="pulse" aria-hidden="true"></span> Available for freelance &amp; full-time roles</p>
+          <h1>I build fast, modern websites that <span class="gradient-text">win customers</span>.</h1>
+          <p class="lead">
+            Hi, I'm <strong>Kevin O. Agu</strong> — a frontend web developer who turns ideas into responsive,
+            accessible and high-performing websites and web apps for businesses, startups and teams.
+          </p>
+          <div class="cta-group">
+            <a href="#projects" class="btn btn-primary">
+              View my work
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+            </a>
+            <a href="#contact" class="btn btn-ghost">Let's talk</a>
           </div>
-
+          <ul class="socials" aria-label="Social links">
+            <li>
+              <a href="https://github.com/aguorji" target="_blank" rel="noopener" aria-label="GitHub">
+                <svg viewBox="0 0 24 24" aria-hidden="true" class="fill">
+                  <path
+                    d="M12 .5a12 12 0 0 0-3.79 23.39c.6.11.82-.26.82-.58v-2.03c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.84 2.81 1.31 3.5 1 .1-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.66.25 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.62-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.7.83.58A12 12 0 0 0 12 .5z" />
+                </svg>
+              </a>
+            </li>
+            <li>
+              <!-- TODO: replace with your LinkedIn profile URL -->
+              <a href="https://www.linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                <svg viewBox="0 0 24 24" aria-hidden="true" class="fill">
+                  <path
+                    d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z" />
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#contact" aria-label="Email">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <rect x="2" y="4" width="20" height="16" rx="2" />
+                  <path d="m22 7-10 6L2 7" />
+                </svg>
+              </a>
+            </li>
+          </ul>
         </div>
 
+        <!-- Code-editor visual (pure HTML/CSS, no image needed) -->
+        <div class="hero-visual" aria-hidden="true">
+          <div class="editor">
+            <div class="editor-bar">
+              <span></span><span></span><span></span>
+              <p>developer.js</p>
+            </div>
+<pre class="editor-body"><code><span class="c-key">const</span> <span class="c-var">developer</span> = {
+  <span class="c-prop">name</span>: <span class="c-str">'Kevin O. Agu'</span>,
+  <span class="c-prop">role</span>: <span class="c-str">'Frontend Developer'</span>,
+  <span class="c-prop">stack</span>: [<span class="c-str">'HTML'</span>, <span class="c-str">'CSS'</span>, <span class="c-str">'JavaScript'</span>, <span class="c-str">'React'</span>],
+  <span class="c-prop">focus</span>: [<span class="c-str">'performance'</span>, <span class="c-str">'accessibility'</span>, <span class="c-str">'UX'</span>],
+  <span class="c-prop">available</span>: <span class="c-key">true</span>,
+  <span class="c-fn">hire</span>() {
+    <span class="c-key">return</span> <span class="c-str">'Let’s build something great!'</span>;
+  }
+};<span class="caret"></span></code></pre>
+          </div>
+          <div class="float-card float-1">
+            <strong>100</strong>
+            <span>Lighthouse<br>performance</span>
+          </div>
+          <div class="float-card float-2">
+            <strong>📱</strong>
+            <span>Mobile-first<br>&amp; responsive</span>
+          </div>
+        </div>
       </div>
-    </section>
 
-    <!-- ABOUT -->
-    <section id="about" class="about">
+      <!-- TODO: update these numbers so they are true for you -->
       <div class="container">
-        <h2>About Me</h2>
-        <p>Introduce yourself professionally. Include background, experience, and your development philosophy.</p>
-      </div>
-    </section>
-
-    <!-- SKILLS -->
-    <section id="skills" class="skills">
-      <div class="container">
-        <h2>Skills</h2>
-        <p>List your core web development skills: HTML, CSS, JavaScript, frameworks, tools, etc.</p>
+        <ul class="stats">
+          <li><strong><span data-count="15">15</span>+</strong><span>Projects built</span></li>
+          <li><strong><span data-count="3">3</span>+</strong><span>Years coding</span></li>
+          <li><strong><span data-count="10">10</span>+</strong><span>Happy clients</span></li>
+          <li><strong><span data-count="100">100</span>%</strong><span>Responsive</span></li>
+        </ul>
       </div>
     </section>
 
     <!-- PROJECTS -->
-    <section id="projects" class="projects">
+    <section id="projects" class="section">
       <div class="container">
-        <h2>Projects</h2>
-        <p>Showcase real projects with links to live demos or GitHub repositories.</p>
+        <header class="section-head reveal">
+          <p class="eyebrow">Portfolio</p>
+          <h2>Selected projects</h2>
+          <p>A few things I've designed and built. Each project focuses on clean code, speed and a great user
+            experience.</p>
+        </header>
+
+        <div class="filters reveal" role="group" aria-label="Filter projects">
+          <button class="filter active" data-filter="all" aria-pressed="true">All</button>
+          <button class="filter" data-filter="website" aria-pressed="false">Websites</button>
+          <button class="filter" data-filter="app" aria-pressed="false">Web apps</button>
+          <button class="filter" data-filter="ui" aria-pressed="false">UI / Landing pages</button>
+        </div>
+
+        <!--
+          HOW TO EDIT A PROJECT CARD
+          1. Put a screenshot in assets/images/projects/ (1200x750 works well).
+          2. Replace the <div class="thumb ..."> content with:
+               <img src="assets/images/projects/your-image.jpg" alt="Short description" loading="lazy">
+          3. Update the title, description, tags, data-category and the two links.
+        -->
+        <div class="project-grid">
+
+          <article class="project-card reveal" data-category="ui">
+            <div class="thumb thumb-1">
+              <div class="mock"><span></span><span></span><span></span></div>
+              <p class="thumb-label">Portfolio</p>
+            </div>
+            <div class="project-body">
+              <h3>Developer Portfolio</h3>
+              <p>This site — a responsive, accessible portfolio with dark mode, project filtering and scroll
+                animations, built without frameworks.</p>
+              <ul class="tags">
+                <li>HTML5</li><li>CSS3</li><li>JavaScript</li>
+              </ul>
+              <div class="project-links">
+                <a href="#top" class="link">Live demo <span aria-hidden="true">↗</span></a>
+                <a href="https://github.com/aguorji/landing-page" target="_blank" rel="noopener" class="link">Source
+                  code <span aria-hidden="true">↗</span></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- TODO: replace with a real project -->
+          <article class="project-card reveal" data-category="app">
+            <div class="thumb thumb-2">
+              <div class="mock"><span></span><span></span><span></span></div>
+              <p class="thumb-label">Dashboard</p>
+            </div>
+            <div class="project-body">
+              <h3>Business Analytics Dashboard</h3>
+              <p>An admin dashboard with charts, filters and data tables that helps a business track sales and
+                customers in real time.</p>
+              <ul class="tags">
+                <li>React</li><li>Chart.js</li><li>REST API</li>
+              </ul>
+              <div class="project-links">
+                <a href="#" class="link">Live demo <span aria-hidden="true">↗</span></a>
+                <a href="https://github.com/aguorji" target="_blank" rel="noopener" class="link">Source code <span
+                    aria-hidden="true">↗</span></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- TODO: replace with a real project -->
+          <article class="project-card reveal" data-category="website">
+            <div class="thumb thumb-3">
+              <div class="mock"><span></span><span></span><span></span></div>
+              <p class="thumb-label">E-commerce</p>
+            </div>
+            <div class="project-body">
+              <h3>E-commerce Storefront</h3>
+              <p>A fast online store with product search, a shopping cart and a smooth checkout flow, optimised
+                for mobile shoppers.</p>
+              <ul class="tags">
+                <li>JavaScript</li><li>Tailwind</li><li>Stripe</li>
+              </ul>
+              <div class="project-links">
+                <a href="#" class="link">Live demo <span aria-hidden="true">↗</span></a>
+                <a href="https://github.com/aguorji" target="_blank" rel="noopener" class="link">Source code <span
+                    aria-hidden="true">↗</span></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- TODO: replace with a real project -->
+          <article class="project-card reveal" data-category="website">
+            <div class="thumb thumb-4">
+              <div class="mock"><span></span><span></span><span></span></div>
+              <p class="thumb-label">Restaurant</p>
+            </div>
+            <div class="project-body">
+              <h3>Restaurant Website</h3>
+              <p>A modern website for a local restaurant with an online menu, image gallery and table
+                reservation form.</p>
+              <ul class="tags">
+                <li>HTML5</li><li>SCSS</li><li>JavaScript</li>
+              </ul>
+              <div class="project-links">
+                <a href="#" class="link">Live demo <span aria-hidden="true">↗</span></a>
+                <a href="https://github.com/aguorji" target="_blank" rel="noopener" class="link">Source code <span
+                    aria-hidden="true">↗</span></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- TODO: replace with a real project -->
+          <article class="project-card reveal" data-category="app">
+            <div class="thumb thumb-5">
+              <div class="mock"><span></span><span></span><span></span></div>
+              <p class="thumb-label">Weather</p>
+            </div>
+            <div class="project-body">
+              <h3>Weather Forecast App</h3>
+              <p>A weather app that uses a public API to show live conditions and a 5-day forecast for any
+                city, with location search.</p>
+              <ul class="tags">
+                <li>JavaScript</li><li>Fetch API</li><li>CSS Grid</li>
+              </ul>
+              <div class="project-links">
+                <a href="#" class="link">Live demo <span aria-hidden="true">↗</span></a>
+                <a href="https://github.com/aguorji" target="_blank" rel="noopener" class="link">Source code <span
+                    aria-hidden="true">↗</span></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- TODO: replace with a real project -->
+          <article class="project-card reveal" data-category="ui">
+            <div class="thumb thumb-6">
+              <div class="mock"><span></span><span></span><span></span></div>
+              <p class="thumb-label">SaaS</p>
+            </div>
+            <div class="project-body">
+              <h3>SaaS Landing Page</h3>
+              <p>A high-converting product landing page with pricing tables, testimonials and a sign-up form,
+                scoring 95+ on Lighthouse.</p>
+              <ul class="tags">
+                <li>HTML5</li><li>CSS3</li><li>Figma</li>
+              </ul>
+              <div class="project-links">
+                <a href="#" class="link">Live demo <span aria-hidden="true">↗</span></a>
+                <a href="https://github.com/aguorji" target="_blank" rel="noopener" class="link">Source code <span
+                    aria-hidden="true">↗</span></a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <div class="center reveal">
+          <a href="https://github.com/aguorji" target="_blank" rel="noopener" class="btn btn-ghost">See more on
+            GitHub</a>
+        </div>
       </div>
     </section>
 
     <!-- SERVICES -->
-    <section id="services" class="services">
+    <section id="services" class="section section-alt">
       <div class="container">
-        <h2>Services</h2>
-        <p>Outline services you provide: Web development, UI/UX design, consultancy, etc.</p>
+        <header class="section-head reveal">
+          <p class="eyebrow">Services</p>
+          <h2>How I can help you</h2>
+          <p>Whether you need a new website, a web app, or improvements to an existing site, I deliver work that
+            looks great and performs even better.</p>
+        </header>
+
+        <div class="service-grid">
+          <article class="service-card reveal">
+            <div class="service-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="2" y="3" width="20" height="14" rx="2" />
+                <path d="M8 21h8M12 17v4" />
+              </svg>
+            </div>
+            <h3>Website development</h3>
+            <p>Custom, responsive websites built from scratch or from your design — fast, SEO-friendly and easy
+              to maintain.</p>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="service-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="m16 18 6-6-6-6M8 6l-6 6 6 6" />
+              </svg>
+            </div>
+            <h3>Web applications</h3>
+            <p>Interactive frontends for dashboards, booking systems and SaaS products, connected to APIs and
+              built to scale.</p>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="service-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 19l7-7 3 3-7 7-3-3z" />
+                <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z" />
+                <path d="M2 2l7.59 7.59" />
+                <circle cx="11" cy="11" r="2" />
+              </svg>
+            </div>
+            <h3>Landing pages &amp; UI</h3>
+            <p>Pixel-perfect landing pages that turn visitors into customers, from Figma designs to polished,
+              animated code.</p>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="service-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z" />
+              </svg>
+            </div>
+            <h3>Speed &amp; SEO optimisation</h3>
+            <p>Audits and fixes that make your existing site load faster, rank higher and work for every user,
+              on every device.</p>
+          </article>
+        </div>
+
+        <!-- Process -->
+        <ol class="process reveal">
+          <li><span>01</span><h3>Discover</h3><p>We talk about your goals, audience and requirements.</p></li>
+          <li><span>02</span><h3>Design</h3><p>I plan the structure and agree the look and feel with you.</p></li>
+          <li><span>03</span><h3>Build</h3><p>I develop, test on real devices and share progress regularly.</p></li>
+          <li><span>04</span><h3>Launch</h3><p>Your site goes live, with support after launch.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">Tech stack</p>
+          <h2>Tools &amp; technologies</h2>
+          <p>The technologies I use every day to design, build and ship production-ready websites.</p>
+        </header>
+
+        <!-- TODO: keep only the skills you are confident with -->
+        <div class="skill-groups">
+          <div class="skill-group reveal">
+            <h3>Frontend</h3>
+            <ul class="chips">
+              <li>HTML5</li><li>CSS3</li><li>JavaScript (ES6+)</li><li>TypeScript</li><li>React</li>
+              <li>Next.js</li><li>Tailwind CSS</li><li>Sass</li>
+            </ul>
+          </div>
+          <div class="skill-group reveal">
+            <h3>Tools &amp; workflow</h3>
+            <ul class="chips">
+              <li>Git &amp; GitHub</li><li>VS Code</li><li>Figma</li><li>npm</li><li>Vite</li>
+              <li>Chrome DevTools</li>
+            </ul>
+          </div>
+          <div class="skill-group reveal">
+            <h3>Practices</h3>
+            <ul class="chips">
+              <li>Responsive design</li><li>Accessibility (WCAG)</li><li>SEO</li><li>Performance</li>
+              <li>REST APIs</li><li>Cross-browser testing</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section section-alt">
+      <div class="container about-grid">
+        <div class="about-photo reveal">
+          <!-- TODO: replace with your photo: <img src="assets/images/profile.jpg" alt="Kevin O. Agu"> -->
+          <div class="photo-placeholder" aria-hidden="true">KA</div>
+        </div>
+        <div class="about-copy reveal">
+          <p class="eyebrow">About me</p>
+          <h2>Code that's clean. Websites that work.</h2>
+          <p>
+            I'm Kevin, a frontend web developer who loves turning ideas into fast, beautiful and accessible
+            websites. I care about the details — clean, maintainable code, smooth interactions and pages that
+            load quickly on any device.
+          </p>
+          <p>
+            I work with businesses, startups and teams to build websites that look professional and help them
+            reach their goals. I'm always learning new tools and best practices so my clients get modern,
+            reliable results.
+          </p>
+          <ul class="checklist">
+            <li>Clear communication &amp; regular updates</li>
+            <li>On-time delivery</li>
+            <li>Mobile-first, accessible builds</li>
+            <li>Support after launch</li>
+          </ul>
+          <div class="cta-group">
+            <a href="#contact" class="btn btn-primary">Work with me</a>
+            <!-- TODO: add your CV at assets/cv.pdf -->
+            <a href="assets/cv.pdf" class="btn btn-ghost" download>Download CV</a>
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- CONTACT -->
-    <section id="contact" class="contact">
+    <section id="contact" class="section">
       <div class="container">
-        <h2>Contact Me</h2>
-        <p>Add a contact form or your professional email/social links.</p>
+        <div class="contact-card reveal">
+          <div class="contact-info">
+            <p class="eyebrow">Contact</p>
+            <h2>Have a project in mind?</h2>
+            <p>I'm currently available for freelance projects and full-time opportunities. Tell me about what
+              you need and I'll reply within 24 hours.</p>
+            <ul class="contact-list">
+              <li>
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <rect x="2" y="4" width="20" height="16" rx="2" />
+                  <path d="m22 7-10 6L2 7" />
+                </svg>
+                <!-- TODO: replace with your email (also update CONTACT_EMAIL in js/main.js) -->
+                <a href="mailto:hello@example.com" class="contact-email">hello@example.com</a>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M12 22s8-7.2 8-13a8 8 0 1 0-16 0c0 5.8 8 13 8 13z" />
+                  <circle cx="12" cy="9" r="3" />
+                </svg>
+                <span>Available remotely worldwide</span>
+              </li>
+            </ul>
+          </div>
+
+          <form class="contact-form" novalidate>
+            <div class="field">
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" autocomplete="name" required placeholder="Your name">
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" autocomplete="email" required placeholder="you@company.com">
+            </div>
+            <div class="field">
+              <label for="message">Project details</label>
+              <textarea id="message" name="message" rows="5" required
+                placeholder="Tell me about your project, timeline and budget"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Send message</button>
+            <p class="form-status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
       </div>
     </section>
 
-
   </main>
-
 
   <!-- FOOTER -->
   <footer class="footer">
-    <div class="container">
-      <p>&copy; 2026 Kevin O. Agu. All rights reserved.</p>
+    <div class="container footer-inner">
+      <a href="#top" class="logo" aria-label="Back to top">
+        <span class="logo-mark">KA</span>
+        <span class="logo-text">Kevin Agu</span>
+      </a>
+      <p>&copy; <span id="year">2026</span> Kevin O. Agu. Designed &amp; built with care.</p>
+      <a href="#top" class="to-top">Back to top ↑</a>
     </div>
   </footer>
 
-  <script src="js/slider.js"></script>
+  <script src="js/main.js"></script>
 </body>
 
 </html>
