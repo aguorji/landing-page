@@ -1,4 +1,6 @@
-# Kevin O. Agu — Developer Portfolio
+# AguTech Labs — Website
+
+Portfolio and business site for AguTech Labs, founded by Kevin O. Agu.
 
 A modern, responsive portfolio landing page built with plain HTML, CSS and JavaScript (no build step).
 

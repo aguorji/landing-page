@@ -352,6 +352,10 @@ p {
   font-weight: 800;
 }
 
+.logo-text span {
+  color: var(--primary);
+}
+
 .nav-links {
   display: flex;
   align-items: center;
