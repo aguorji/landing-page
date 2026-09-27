@@ -111,7 +111,7 @@ filters.forEach((btn) => {
       b.setAttribute('aria-pressed', String(b === btn));
     });
     cards.forEach((card) => {
-      const show = cat === 'all' || card.dataset.category === cat;
+      const show = cat === 'all' || card.dataset.category.split(' ').includes(cat);
       card.classList.toggle('hidden', !show);
       if (show) card.classList.add('visible');
     });
