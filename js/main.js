@@ -119,20 +119,38 @@ filters.forEach((btn) => {
 });
 
 /* ---------- Contact form ---------- */
-// Opens the visitor's email app with the message pre-filled.
-// To receive messages without an email app, point the form at a service
-// like Formspree or Netlify Forms instead.
+// To receive messages directly in your inbox, create a free form at
+// https://formspree.io (use info@agutechlabs.com) and paste its ID here,
+// e.g. 'xyzabcde'. While empty, the form opens the visitor's email app instead.
+const FORMSPREE_ID = '';
+
 const form = document.querySelector('.contact-form');
 const statusEl = form.querySelector('.form-status');
+const submitBtn = form.querySelector('[type="submit"]');
+const messageEl = form.querySelector('#message');
 
 document.querySelectorAll('.contact-email').forEach((a) => {
   a.href = `mailto:${CONTACT_EMAIL}`;
   a.textContent = CONTACT_EMAIL;
 });
 
-form.addEventListener('submit', (e) => {
+// "Get started" buttons on the packages pre-fill the message
+document.querySelectorAll('[data-package]').forEach((btn) => {
+  btn.addEventListener('click', () => {
+    if (!messageEl.value.trim()) {
+      messageEl.value = `Hi, I'm interested in the ${btn.dataset.package} package. `;
+    }
+  });
+});
+
+function showStatus(text, type) {
+  statusEl.textContent = text;
+  statusEl.className = `form-status ${type}`;
+}
+
+form.addEventListener('submit', async (e) => {
   e.preventDefault();
-  const fields = [...form.querySelectorAll('input, textarea')];
+  const fields = [...form.querySelectorAll('input:not(.hp), textarea')];
   let firstInvalid = null;
 
   fields.forEach((f) => {
@@ -142,20 +160,44 @@ form.addEventListener('submit', (e) => {
   });
 
   if (firstInvalid) {
-    statusEl.textContent = 'Please fill in all fields with a valid email address.';
-    statusEl.className = 'form-status error';
+    showStatus('Please fill in all fields with a valid email address.', 'error');
     firstInvalid.focus();
     return;
   }
 
-  const { name, email, message } = Object.fromEntries(new FormData(form));
-  const subject = encodeURIComponent(`Project enquiry from ${name}`);
-  const body = encodeURIComponent(`${message}\n\n— ${name} (${email})`);
-  window.location.href = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
+  const data = new FormData(form);
+  if (data.get('_gotcha')) return; // spam bot
 
-  statusEl.textContent = 'Thanks! Your email app should open to send the message.';
-  statusEl.className = 'form-status success';
-  form.reset();
+  const { name, email, message } = Object.fromEntries(data);
+
+  if (!FORMSPREE_ID) {
+    const subject = encodeURIComponent(`Project enquiry from ${name}`);
+    const body = encodeURIComponent(`${message}\n\n— ${name} (${email})`);
+    window.location.href = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
+    showStatus('Thanks! Your email app should open to send the message.', 'success');
+    form.reset();
+    return;
+  }
+
+  submitBtn.disabled = true;
+  submitBtn.textContent = 'Sending…';
+  data.append('_subject', `New project enquiry from ${name}`);
+
+  try {
+    const res = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
+      method: 'POST',
+      body: data,
+      headers: { Accept: 'application/json' },
+    });
+    if (!res.ok) throw new Error(`Status ${res.status}`);
+    showStatus("Thanks! Your message has been sent. I'll reply within 24 hours.", 'success');
+    form.reset();
+  } catch (err) {
+    showStatus(`Sorry, something went wrong. Please email ${CONTACT_EMAIL} directly.`, 'error');
+  } finally {
+    submitBtn.disabled = false;
+    submitBtn.textContent = 'Send message';
+  }
 });
 
 /* ---------- Footer year ---------- */
