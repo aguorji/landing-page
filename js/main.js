@@ -122,7 +122,7 @@ filters.forEach((btn) => {
 // To receive messages directly in your inbox, create a free form at
 // https://formspree.io (use info@agutechlabs.com) and paste its ID here,
 // e.g. 'xyzabcde'. While empty, the form opens the visitor's email app instead.
-const FORMSPREE_ID = '';
+const FORMSPREE_ID = 'xppwoyvo';
 
 const form = document.querySelector('.contact-form');
 const statusEl = form.querySelector('.form-status');
