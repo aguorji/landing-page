@@ -20,9 +20,8 @@ Search the project for `TODO` — every spot that needs your real details is mar
 4. **Photo:** add `assets/images/profile.jpg` and replace the `KA` placeholder in the About section.
 5. **CV:** add your CV as `assets/cv.pdf`.
 6. **Stats & skills:** keep only numbers and skills that are true for you.
-7. **Contact form:** create a free form at [formspree.io](https://formspree.io) using
-   `info@agutechlabs.com`, then paste its ID into `FORMSPREE_ID` in `js/main.js`.
-   Until then, the form opens the visitor's email app.
+7. **Contact form:** sends through Formspree (form `xppwoyvo`, owned by `info@agutechlabs.com`).
+   To change it, update `FORMSPREE_ID` in `js/main.js`.
 8. **Prices:** replace the "Quote on request" lines in the Packages section with your prices.
 9. **Testimonials:** the section is hidden. Add real client quotes, then remove `hidden` from
    `<section id="testimonials">`.
