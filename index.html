@@ -207,135 +207,96 @@
         </div>
 
         <!--
-          HOW TO EDIT A PROJECT CARD
-          1. Put a screenshot in assets/images/projects/ (1200x750 works well).
-          2. Replace the <div class="thumb ..."> content with:
-               <img src="assets/images/projects/your-image.jpg" alt="Short description" loading="lazy">
-          3. Update the title, description, tags, data-category and the two links.
+          HOW TO ADD A PROJECT CARD
+          1. Put a screenshot in assets/images/projects/ (1280x800, saved as .jpg).
+          2. Copy one <article class="project-card"> and update the image, title, description, tags and links.
+          3. data-category can hold one or more of: website, app, ui (space-separated).
         -->
         <div class="project-grid">
 
-          <article class="project-card reveal" data-category="ui">
-            <div class="thumb thumb-1">
-              <div class="mock"><span></span><span></span><span></span></div>
-              <p class="thumb-label">Portfolio</p>
+          <!-- Featured client project -->
+          <article class="project-card featured reveal" data-category="website app">
+            <div class="thumb">
+              <img src="assets/images/projects/ets-besvid-benin.jpg"
+                alt="Ets Besvid Benin website homepage: Premium Goods. Reliable Trade. West Africa." loading="lazy"
+                width="960" height="600">
             </div>
             <div class="project-body">
-              <h3>Developer Portfolio</h3>
-              <p>This site — a responsive, accessible portfolio with dark mode, project filtering and scroll
-                animations, built without frameworks.</p>
+              <p class="project-label">Client project · Live</p>
+              <h3>Ets Besvid Benin — Corporate Website &amp; Business System</h3>
+              <p>A corporate website for a wholesale clothing importer in Benin, plus a secure staff portal that
+                runs the business: login with admin and staff roles, stock and consignment tracking, sales
+                reconciliation, audit logs and Excel reports.</p>
               <ul class="tags">
-                <li>HTML5</li><li>CSS3</li><li>JavaScript</li>
+                <li>React</li><li>Node.js</li><li>Express</li><li>MongoDB</li><li>Tailwind CSS</li>
               </ul>
               <div class="project-links">
-                <a href="#top" class="link">Live demo <span aria-hidden="true">↗</span></a>
-                <a href="https://github.com/aguorji/landing-page" target="_blank" rel="noopener" class="link">Source
+                <a href="https://www.besvidbenin.com/" target="_blank" rel="noopener" class="link">Visit website
+                  <span aria-hidden="true">↗</span></a>
+                <span class="link-muted">Source code private (client)</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal" data-category="ui">
+            <div class="thumb">
+              <img src="assets/images/projects/youtube-clone.jpg" alt="YouTube homepage clone with video grid and sidebar"
+                loading="lazy" width="960" height="600">
+            </div>
+            <div class="project-body">
+              <h3>YouTube Clone</h3>
+              <p>A responsive recreation of the YouTube homepage with playable videos, a Shorts shelf, live search
+                and a collapsible sidebar.</p>
+              <ul class="tags">
+                <li>HTML5</li><li>CSS Grid</li><li>JavaScript</li>
+              </ul>
+              <div class="project-links">
+                <a href="https://aguorji.github.io/youtubeclone/" target="_blank" rel="noopener" class="link">Live demo
+                  <span aria-hidden="true">↗</span></a>
+                <a href="https://github.com/aguorji/Youtubeclone" target="_blank" rel="noopener" class="link">Source
                   code <span aria-hidden="true">↗</span></a>
               </div>
             </div>
           </article>
 
-          <!-- TODO: replace with a real project -->
           <article class="project-card reveal" data-category="app">
-            <div class="thumb thumb-2">
-              <div class="mock"><span></span><span></span><span></span></div>
-              <p class="thumb-label">Dashboard</p>
+            <div class="thumb">
+              <img src="assets/images/projects/rock-paper-scissors.jpg"
+                alt="Rock Paper Scissors game with scoreboard and round history" loading="lazy" width="960"
+                height="600">
             </div>
             <div class="project-body">
-              <h3>Business Analytics Dashboard</h3>
-              <p>An admin dashboard with charts, filters and data tables that helps a business track sales and
-                customers in real time.</p>
+              <h3>Rock Paper Scissors</h3>
+              <p>A browser game against the computer: first to 5 wins, with a live scoreboard, round history,
+                keyboard shortcuts and an end-of-game result screen.</p>
               <ul class="tags">
-                <li>React</li><li>Chart.js</li><li>REST API</li>
+                <li>JavaScript</li><li>DOM</li><li>CSS</li>
               </ul>
               <div class="project-links">
-                <a href="#" class="link">Live demo <span aria-hidden="true">↗</span></a>
-                <a href="https://github.com/aguorji" target="_blank" rel="noopener" class="link">Source code <span
-                    aria-hidden="true">↗</span></a>
+                <a href="https://aguorji.github.io/rock-paper-scissors/" target="_blank" rel="noopener"
+                  class="link">Play it <span aria-hidden="true">↗</span></a>
+                <a href="https://github.com/aguorji/rock-paper-scissors" target="_blank" rel="noopener"
+                  class="link">Source code <span aria-hidden="true">↗</span></a>
               </div>
             </div>
           </article>
 
-          <!-- TODO: replace with a real project -->
           <article class="project-card reveal" data-category="website">
-            <div class="thumb thumb-3">
-              <div class="mock"><span></span><span></span><span></span></div>
-              <p class="thumb-label">E-commerce</p>
+            <div class="thumb">
+              <img src="assets/images/projects/agutech-labs.jpg" alt="AguTech Labs website homepage" loading="lazy"
+                width="960" height="600">
             </div>
             <div class="project-body">
-              <h3>E-commerce Storefront</h3>
-              <p>A fast online store with product search, a shopping cart and a smooth checkout flow, optimised
-                for mobile shoppers.</p>
+              <h3>AguTech Labs Website</h3>
+              <p>This site — a fast, accessible business website with dark mode, project filters, pricing, FAQ and
+                a working contact form, deployed automatically with GitHub Actions.</p>
               <ul class="tags">
-                <li>JavaScript</li><li>Tailwind</li><li>Stripe</li>
+                <li>HTML5</li><li>CSS3</li><li>JavaScript</li><li>GitHub Actions</li>
               </ul>
               <div class="project-links">
-                <a href="#" class="link">Live demo <span aria-hidden="true">↗</span></a>
-                <a href="https://github.com/aguorji" target="_blank" rel="noopener" class="link">Source code <span
-                    aria-hidden="true">↗</span></a>
-              </div>
-            </div>
-          </article>
-
-          <!-- TODO: replace with a real project -->
-          <article class="project-card reveal" data-category="website">
-            <div class="thumb thumb-4">
-              <div class="mock"><span></span><span></span><span></span></div>
-              <p class="thumb-label">Restaurant</p>
-            </div>
-            <div class="project-body">
-              <h3>Restaurant Website</h3>
-              <p>A modern website for a local restaurant with an online menu, image gallery and table
-                reservation form.</p>
-              <ul class="tags">
-                <li>HTML5</li><li>SCSS</li><li>JavaScript</li>
-              </ul>
-              <div class="project-links">
-                <a href="#" class="link">Live demo <span aria-hidden="true">↗</span></a>
-                <a href="https://github.com/aguorji" target="_blank" rel="noopener" class="link">Source code <span
-                    aria-hidden="true">↗</span></a>
-              </div>
-            </div>
-          </article>
-
-          <!-- TODO: replace with a real project -->
-          <article class="project-card reveal" data-category="app">
-            <div class="thumb thumb-5">
-              <div class="mock"><span></span><span></span><span></span></div>
-              <p class="thumb-label">Weather</p>
-            </div>
-            <div class="project-body">
-              <h3>Weather Forecast App</h3>
-              <p>A weather app that uses a public API to show live conditions and a 5-day forecast for any
-                city, with location search.</p>
-              <ul class="tags">
-                <li>JavaScript</li><li>Fetch API</li><li>CSS Grid</li>
-              </ul>
-              <div class="project-links">
-                <a href="#" class="link">Live demo <span aria-hidden="true">↗</span></a>
-                <a href="https://github.com/aguorji" target="_blank" rel="noopener" class="link">Source code <span
-                    aria-hidden="true">↗</span></a>
-              </div>
-            </div>
-          </article>
-
-          <!-- TODO: replace with a real project -->
-          <article class="project-card reveal" data-category="ui">
-            <div class="thumb thumb-6">
-              <div class="mock"><span></span><span></span><span></span></div>
-              <p class="thumb-label">SaaS</p>
-            </div>
-            <div class="project-body">
-              <h3>SaaS Landing Page</h3>
-              <p>A high-converting product landing page with pricing tables, testimonials and a sign-up form,
-                scoring 95+ on Lighthouse.</p>
-              <ul class="tags">
-                <li>HTML5</li><li>CSS3</li><li>Figma</li>
-              </ul>
-              <div class="project-links">
-                <a href="#" class="link">Live demo <span aria-hidden="true">↗</span></a>
-                <a href="https://github.com/aguorji" target="_blank" rel="noopener" class="link">Source code <span
-                    aria-hidden="true">↗</span></a>
+                <a href="https://agutechlabs.com/" class="link">Live site <span aria-hidden="true">↗</span></a>
+                <a href="https://github.com/aguorji/landing-page" target="_blank" rel="noopener" class="link">Source
+                  code <span aria-hidden="true">↗</span></a>
               </div>
             </div>
           </article>
