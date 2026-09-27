@@ -49,11 +49,11 @@ npx serve .
 
 Live domain: **https://agutechlabs.com**
 
-Works on any static host. For GitHub Pages, the `CNAME` file already points the site at
-`agutechlabs.com`:
+Works on any static host. It is published with GitHub Pages by the workflow in
+`.github/workflows/pages.yml`, which deploys on every push to `main`:
 
-1. Repo **Settings → Pages** → deploy from the `main` branch, root folder.
-2. At your domain registrar, add DNS records:
+1. Repo **Settings → Pages → Build and deployment → Source: GitHub Actions**.
+2. DNS at your domain registrar (the `CNAME` file sets the custom domain):
    - `A` records for `@` → `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
    - `CNAME` record for `www` → `aguorji.github.io`
 3. Once DNS is live, tick **Enforce HTTPS** in the Pages settings.
